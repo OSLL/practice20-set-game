@@ -7,6 +7,7 @@ import android.view.View
 import kotlinx.android.synthetic.main.main_menu.*
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_menu)
@@ -27,7 +28,30 @@ class MainActivity : AppCompatActivity() {
             startActivity(intentAI)
         }
 
+
+        val colors = arrayOf("g", "r", "p")
+        val shapes = arrayOf("r", "o", "w")
+        val fillings = arrayOf("e", "f", "s")
+        val quantities = arrayOf("1", "2", "3")
+        var card: Field
+        //var i: Int = 0
+        for (i in 3 downTo 0) {
+            for (j in 3 downTo 0) {
+                for (ji in 3 downTo 0){
+                    for (ij in 3 downTo 0) {
+                        when() {
+                             = "green"
+                        }
+                    }
+                }
+            }
+        }
     }
+        /*colors.forEach { card.color ->
+            shapes.forEach {
+
+            }
+        }*/
 }
 
 /*
@@ -36,11 +60,13 @@ field: cardInDeck[] cardOnField[] player[]
 player: color score playerStatus(active, passive, locked) timeLeft cardInHand[] isCorrect difficulty(time, %of mistake)
 */
 
-public class Card {
+public class Card (var color: String, var shape: String, var filling: String, var quantity: Int) {
+    /*
     var color: String = "red, green, purple"
     var shape: String = "rhombus, oval, wave"
     var filling: String = "full, stripped, empty"
     var quantity: Int = -1 // 1, 2 or 3
+    */
     var isChosen: Boolean = false
 }
 
@@ -50,9 +76,7 @@ public class Field {
     var player: Array<Player> = arrayOf()
 }
 
-public class Player {
-    var color: String = "red, green, blue, yellow"
-    var playerStatus: String = "active, passive, locked"
+public class Player(var color: String, var playerStatus: String) {
     var score: Int = -1
     var timeLeft: Float = -1f
     var cardInHand: Array<Card> = arrayOf()
