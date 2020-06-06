@@ -9,11 +9,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar" >
-
-    <activity
-
-        android:name="com.makentoshe.androidgithubcitemplate.MainActivity"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".PvsAIActivity"></activity>
+        <activity android:name=".CardField4pActivity" />
+        <activity android:name=".CardField2pActivity" />
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity">
             <intent-filter>
