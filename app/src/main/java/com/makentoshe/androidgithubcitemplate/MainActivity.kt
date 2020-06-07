@@ -1,13 +1,11 @@
 package com.makentoshe.androidgithubcitemplate
 
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import kotlinx.android.synthetic.main.main_menu.*
-
 class MainActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_menu)
@@ -22,36 +20,37 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent4p)
         }
 
+        buttonRules.setOnClickListener {
+            val intentRules = Intent(this, RulesActivity::class.java)
+            startActivity(intentRules)
+        }
 
         buttonAI.setOnClickListener {
             val intentAI = Intent(this, PvsAIActivity::class.java)
             startActivity(intentAI)
         }
 
-
         val colors = arrayOf("g", "r", "p")
         val shapes = arrayOf("r", "o", "w")
         val fillings = arrayOf("e", "f", "s")
-        val quantities = arrayOf("1", "2", "3")
-        var card: Field
-        //var i: Int = 0
-        for (i in 3 downTo 0) {
-            for (j in 3 downTo 0) {
-                for (ji in 3 downTo 0){
-                    for (ij in 3 downTo 0) {
-                        when() {
-                             = "green"
-                        }
+        val quantities = arrayOf(1, 2, 3)
+        val field = Field()
+
+        val a = mutableListOf<Card>()
+        for(color in colors) {
+            for(shape in shapes) {
+                for(filling in fillings) {
+                    for(quantity in quantities) {
+                        val card = Card(color, shape, filling, quantity)
+                        a.add(card)
+                        println()
+                        val img = this.resources?.getDrawable(this.resources.getIdentifier(card.filename(), "drawable", this.packageName))
+                        card.cardImage = img
                     }
                 }
             }
         }
     }
-        /*colors.forEach { card.color ->
-            shapes.forEach {
-
-            }
-        }*/
 }
 
 /*
@@ -61,13 +60,21 @@ player: color score playerStatus(active, passive, locked) timeLeft cardInHand[] 
 */
 
 public class Card (var color: String, var shape: String, var filling: String, var quantity: Int) {
+
     /*
     var color: String = "red, green, purple"
     var shape: String = "rhombus, oval, wave"
     var filling: String = "full, stripped, empty"
     var quantity: Int = -1 // 1, 2 or 3
     */
+
+    var cardImage: Drawable? = null
     var isChosen: Boolean = false
+
+
+    fun filename(): String {
+        return "$color$shape$filling$quantity"
+    }
 }
 
 public class Field {

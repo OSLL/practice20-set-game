@@ -5,11 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:screenOrientation="landscape"
     tools:context="com.makentoshe.androidgithubcitemplate.MainActivity"
+    android:screenOrientation="landscape"
     tools:ignore="LockedOrientationActivity">
-
-
 
     <Button
         android:id="@+id/buttonSet_left_up"
