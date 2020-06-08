@@ -30,6 +30,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intentAI)
         }
 
+        buttonSettings.setOnClickListener {
+            val intentAI = Intent(this, SettingsActivity::class.java)
+            startActivity(intentAI)
+        }
+
         val colors = arrayOf("g", "r", "p")
         val shapes = arrayOf("r", "o", "w")
         val fillings = arrayOf("e", "f", "s")
