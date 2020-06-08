@@ -88,6 +88,12 @@ public class Field {
     var player: Array<Player> = arrayOf()
 }
 
+enum class PlayerState(val state: String) {
+    ACTIVE("active"),
+    PASSIVE("passive"),
+    LOCKED("locked")
+}
+
 public class Player(var color: String, var playerStatus: String) {
     var score: Int = -1
     var timeLeft: Float = -1f
