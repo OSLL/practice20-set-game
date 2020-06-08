@@ -5,11 +5,13 @@ import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.main_menu.*
+
+
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_menu)
-
         button2p.setOnClickListener {
             val intent2p = Intent(this, CardField2pActivity::class.java)
             startActivity(intent2p)
@@ -88,12 +90,6 @@ public class Field {
     var player: Array<Player> = arrayOf()
 }
 
-enum class PlayerState(val state: String) {
-    ACTIVE("active"),
-    PASSIVE("passive"),
-    LOCKED("locked")
-}
-
 public class Player(var color: String, var playerStatus: String) {
     var score: Int = -1
     var timeLeft: Float = -1f
@@ -102,5 +98,8 @@ public class Player(var color: String, var playerStatus: String) {
     public class difficulty {
         var timeToFind: Float = -1f
         var chanceOfMistake: Float = -1f
+    }
+    enum class PlayerState() {
+        ACTIVE, PASSIVE, LOCKED
     }
 }

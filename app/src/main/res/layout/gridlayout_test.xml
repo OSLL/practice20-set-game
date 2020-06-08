@@ -1,91 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:screenOrientation="landscape"
-    tools:context="com.makentoshe.androidgithubcitemplate.MainActivity"
-    tools:ignore="LockedOrientationActivity">
-
-
-    <Button
-        android:id="@+id/buttonSet_left"
-        android:layout_width="109dp"
-        android:layout_height="68dp"
-        android:text="@string/round_set_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.026"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.047" />
-
-    <Button
-        android:id="@+id/buttonSet_right"
-        android:layout_width="109dp"
-        android:layout_height="68dp"
-        android:text="@string/round_set_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.974"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.953" />
-
-
-    <Button
-        android:id="@+id/buttonAdd_left"
-        android:layout_width="109dp"
-        android:layout_height="68dp"
-        android:text="@string/add_cards"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.026"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.400" />
-    <!--TODO Change font size-->
-
-    <Button
-        android:id="@+id/buttonAdd_right"
-        android:layout_width="109dp"
-        android:layout_height="68dp"
-        android:text="@string/add_cards"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.974"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.600" />
-
-
-    <TextView
-        android:id="@+id/textScore_left"
-        android:layout_width="104dp"
-        android:layout_height="46dp"
-        android:text="@string/score"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.060"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.900" />
-
-
-    <TextView
-        android:id="@+id/textScore_right"
-        android:layout_width="56dp"
-        android:layout_height="30dp"
-        android:text="@string/score"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.940"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.200" />
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <GridLayout
         android:layout_width="wrap_content"
@@ -95,10 +13,10 @@
         android:stretchMode="spacingWidth"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.563"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="1.0">
 
         <Button
             android:id="@+id/buttonCard1"

@@ -18,24 +18,20 @@
 
 <!--        <item-->
 <!--            android:id="@+id/easy"-->
-<!--            android:icon="@drawable/ic_mail"-->
 <!--            android:title="@string/Easy" />-->
 
 <!--        <item-->
 <!--            android:id="@+id/normal"-->
-<!--            android:icon="@drawable/ic_upload"-->
 <!--            android:title="@string/Normal" />-->
 
 <!--        <item-->
 <!--            android:id="@+id/hard"-->
-<!--            android:icon="@drawable/ic_share"-->
 <!--            android:title="@string/Hard" />-->
 
 <!--        <item-->
 <!--            android:id="@+id/practice"-->
-<!--            android:icon="@drawable/ic_share"-->
 <!--            android:title="@string/Practice Mode" />-->
-<!--    </Difficulty>-->
+<!--    </>-->
 
     <TextView
         android:id="@+id/volumeText"
