@@ -13,6 +13,9 @@
         <activity android:name=".RulesActivity"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".SettingsActivity"
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".PvsAIActivity"
             android:screenOrientation="landscape"
