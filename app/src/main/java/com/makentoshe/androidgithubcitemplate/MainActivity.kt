@@ -4,30 +4,87 @@ import android.content.Intent
 import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
 import kotlinx.android.synthetic.main.main_menu.*
+import kotlinx.android.synthetic.main.set_game_2_players.*
+import kotlin.system.exitProcess
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_menu)
 
+        val timer = object: CountDownTimer(1000, 1000) {
+            override fun onTick(millisUntilFinished: Long) {
+                println("seconds remaining: " + millisUntilFinished / 1000)
+            }
+
+
+            override fun onFinish() {
+                button2p.isEnabled = true
+                button4p.isEnabled = true
+                buttonRules.isEnabled = true
+                buttonAI.isEnabled = true
+                //buttonSettings.isEnabled = true
+            }
+        }
+
+
+
         button2p.setOnClickListener {
             val intent2p = Intent(this, CardField2pActivity::class.java)
             startActivity(intent2p)
+            button2p.isEnabled = false
+            button4p.isEnabled = false
+            buttonRules.isEnabled = false
+            buttonAI.isEnabled = false
+            //  buttonSettings.isEnabled = false
+            timer.start()
         }
+
 
         button4p.setOnClickListener {
             val intent4p = Intent(this, CardField4pActivity::class.java)
             startActivity(intent4p)
+            button2p.isEnabled = false
+            button4p.isEnabled = false
+            buttonRules.isEnabled = false
+            buttonAI.isEnabled = false
+            //  buttonSettings.isEnabled = false
+            timer.start()
         }
 
         buttonRules.setOnClickListener {
             val intentRules = Intent(this, RulesActivity::class.java)
             startActivity(intentRules)
+            button2p.isEnabled = false
+            button4p.isEnabled = false
+            buttonRules.isEnabled = false
+            buttonAI.isEnabled = false
+            //  buttonSettings.isEnabled = false
+            timer.start()
         }
 
         buttonAI.setOnClickListener {
             val intentAI = Intent(this, PvsAIActivity::class.java)
             startActivity(intentAI)
+            button2p.isEnabled = false
+            button4p.isEnabled = false
+            buttonRules.isEnabled = false
+            buttonAI.isEnabled = false
+            //  buttonSettings.isEnabled = false
+            timer.start()
+        }
+//
+//        buttonSettings.setOnClickListener {
+//            val intentSettings = Intent(this, PvsAIActivity::class.java)
+//            startActivity(intentAI)
+//            DisableAll()
+//            timer.start()
+//        }
+        buttonExit.setOnClickListener {
+            finish();
+            exitProcess(0);
         }
 
         val colors = arrayOf("g", "r", "p")
@@ -83,11 +140,16 @@ public class Field {
     var player: Array<Player> = arrayOf()
 }
 
-public class Player(var color: String, var playerStatus: String) {
+public class Player(var color: String, var status: PlayerState) {
     var score: Int = -1
     var timeLeft: Float = -1f
     var cardInHand: Array<Card> = arrayOf()
     var isCorrect: Boolean = false
+
+    enum class PlayerState() {
+        ACTIVE, PASSIVE, LOCKED
+    }
+
     public class difficulty {
         var timeToFind: Float = -1f
         var chanceOfMistake: Float = -1f
