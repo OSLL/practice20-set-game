@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+<!--    <Difficulty-->
+<!--        android:layout_width="167dp"-->
+<!--        android:layout_height="55dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.953"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.106">-->
+
+<!--        <item-->
+<!--            android:id="@+id/easy"-->
+<!--            android:icon="@drawable/ic_mail"-->
+<!--            android:title="@string/Easy" />-->
+
+<!--        <item-->
+<!--            android:id="@+id/normal"-->
+<!--            android:icon="@drawable/ic_upload"-->
+<!--            android:title="@string/Normal" />-->
+
+<!--        <item-->
+<!--            android:id="@+id/hard"-->
+<!--            android:icon="@drawable/ic_share"-->
+<!--            android:title="@string/Hard" />-->
+
+<!--        <item-->
+<!--            android:id="@+id/practice"-->
+<!--            android:icon="@drawable/ic_share"-->
+<!--            android:title="@string/Practice Mode" />-->
+<!--    </Difficulty>-->
+
+    <TextView
+        android:id="@+id/volumeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volume"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.102" />
+
+    <SeekBar
+        android:id="@+id/seekBarVolume"
+        android:layout_width="160dp"
+        android:layout_height="106dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.177" />
+
+    <TextView
+        android:id="@+id/timeToShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time to show set"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.102" />
+
+    <SeekBar
+        android:id="@+id/seekBarTimeToShow"
+        android:layout_width="160dp"
+        android:layout_height="106dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.177" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
