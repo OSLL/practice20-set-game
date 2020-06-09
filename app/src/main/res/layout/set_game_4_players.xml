@@ -48,7 +48,7 @@
         app:layout_constraintVertical_bias="0.047" />
 
     <Button
-        android:id="@+id/buttonSet_right_down"
+        android:id="@+id/buttonSet_right_bottom"
         android:layout_width="109dp"
         android:layout_height="68dp"
         android:text="@string/round_set_button"
