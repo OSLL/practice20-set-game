@@ -289,50 +289,50 @@
 
         </Button>
 
-        <Button
-            android:id="@+id/buttonCard10"
-            android:layout_width="85dp"
-            android:layout_height="119dp"
-            android:layout_margin="20dp"
-            android:layout_marginTop="-47dp"
-            android:background="@drawable/pre3"
-            android:rotation="90"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+<!--        <Button-->
+<!--            android:id="@+id/buttonCard10"-->
+<!--            android:layout_width="85dp"-->
+<!--            android:layout_height="119dp"-->
+<!--            android:layout_margin="20dp"-->
+<!--            android:layout_marginTop="-47dp"-->
+<!--            android:background="@drawable/pre3"-->
+<!--            android:rotation="90"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
 
-        </Button>
+<!--        </Button>-->
 
-        <Button
-            android:id="@+id/buttonCard11"
-            android:layout_width="85dp"
-            android:layout_height="119dp"
-            android:layout_margin="20dp"
-            android:layout_marginTop="-47dp"
-            android:background="@drawable/prs1"
-            android:rotation="90"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+<!--        <Button-->
+<!--            android:id="@+id/buttonCard11"-->
+<!--            android:layout_width="85dp"-->
+<!--            android:layout_height="119dp"-->
+<!--            android:layout_margin="20dp"-->
+<!--            android:layout_marginTop="-47dp"-->
+<!--            android:background="@drawable/prs1"-->
+<!--            android:rotation="90"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
 
-        </Button>
+<!--        </Button>-->
 
-        <Button
-            android:id="@+id/buttonCard12"
-            android:layout_width="85dp"
-            android:layout_height="119dp"
-            android:layout_margin="20dp"
-            android:layout_marginTop="-47dp"
-            android:background="@drawable/gwf1"
-            android:rotation="90"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+<!--        <Button-->
+<!--            android:id="@+id/buttonCard12"-->
+<!--            android:layout_width="85dp"-->
+<!--            android:layout_height="119dp"-->
+<!--            android:layout_margin="20dp"-->
+<!--            android:layout_marginTop="-47dp"-->
+<!--            android:background="@drawable/gwf1"-->
+<!--            android:rotation="90"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
 
-        </Button>
+<!--        </Button>-->
     </GridLayout>
 
 

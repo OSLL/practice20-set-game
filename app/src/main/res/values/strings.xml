@@ -5,4 +5,10 @@
     <string name="show_set">Show SET</string>
     <string name="round_set_button">*Round SET button*</string>
     <string name="card">*card*</string>
+    <string-array name="difficulty">
+        <item>Easy</item>
+        <item>Normal</item>
+        <item>Hard</item>
+        <item>Practice mode</item>
+    </string-array>
 </resources>

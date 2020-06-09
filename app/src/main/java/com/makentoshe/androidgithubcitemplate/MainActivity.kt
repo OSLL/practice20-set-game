@@ -2,15 +2,14 @@ package com.makentoshe.androidgithubcitemplate
 
 import android.content.Intent
 import android.graphics.drawable.Drawable
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ArrayAdapter
+import android.widget.Spinner
+import androidx.appcompat.app.AppCompatActivity
 import android.os.CountDownTimer
 import kotlinx.android.synthetic.main.main_menu.*
 import kotlinx.android.synthetic.main.set_game_2_players.*
 import kotlin.system.exitProcess
-
-
-
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,8 +31,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-
-
         button2p.setOnClickListener {
             val intent2p = Intent(this, CardField2pActivity::class.java)
             startActivity(intent2p)
@@ -44,8 +41,7 @@ class MainActivity : AppCompatActivity() {
             //  buttonSettings.isEnabled = false
             timer.start()
         }
-
-
+        
         button4p.setOnClickListener {
             val intent4p = Intent(this, CardField4pActivity::class.java)
             startActivity(intent4p)
@@ -95,6 +91,15 @@ class MainActivity : AppCompatActivity() {
             startActivity(intentSettings)
         }
 
+        val spinner: Spinner = findViewById(R.id.difficultySpinner)
+        val adapter = ArrayAdapter.createFromResource(
+            this,
+            R.array.difficulty, R.layout.support_simple_spinner_dropdown_item
+        )
+        adapter.setDropDownViewResource(R.layout.difficulty_layout)
+        spinner.adapter = adapter
+        spinner.setOnItemSelectedListener(this)
+
         val colors = arrayOf("g", "r", "p")
         val shapes = arrayOf("r", "o", "w")
         val fillings = arrayOf("e", "f", "s")
@@ -116,6 +121,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+}
+
+private fun Spinner.setOnItemSelectedListener(mainActivity: MainActivity) {
+    TODO("Not yet implemented")
 }
 
 /*
@@ -153,13 +162,11 @@ public class Player(var color: String, var playerStatus: String) {
     var timeLeft: Float = -1f
     var cardInHand: Array<Card> = arrayOf()
     var isCorrect: Boolean = false
-
-    enum class PlayerState() {
-        ACTIVE, PASSIVE, LOCKED
-    }
-
     public class difficulty {
         var timeToFind: Float = -1f
         var chanceOfMistake: Float = -1f
+    }
+    enum class PlayerState() {
+        ACTIVE, PASSIVE, LOCKED
     }
 }
